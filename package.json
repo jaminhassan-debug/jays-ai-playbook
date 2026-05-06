@@ -1,0 +1,28 @@
+{
+  "name": "jays-ai-playbook",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate": "node scripts/generate.js"
+  },
+  "dependencies": {
+    "next": "^13.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@supabase/supabase-js": "^2.0.0",
+    "@supabase/ssr": "^0.0.0",
+    "stripe": "^12.0.0",
+    "tailwindcss": "^3.0.0",
+    "@heroicons/react": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^13.0.0",
+    "dotenv": "^16.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0"
+  }
+}
