@@ -1,0 +1,352 @@
+[
+ {
+  "slug": "salon-dm-replies",
+  "title": "Stop answering “how much is a balayage?” at 11pm",
+  "industry": "Salons & beauty",
+  "job": "Customer service",
+  "time_saved": "4–6 hrs a week",
+  "tools": "ChatGPT or Claude, then ManyChat",
+  "story": "Picture Priya. She runs a three-chair salon and spends her evenings answering the same DMs: prices, parking, “anything free Saturday?”. This prompt builds her a library of replies she can paste in seconds, and later load into a DM bot so it answers for her.",
+  "prompt": "You're the front-desk assistant for my salon, [salon name] in [town].\nServices and prices: [paste your price list]\nOpening hours: [hours]\nParking and how to find us: [notes]\nBooking link: [link]\n\nWrite replies to the 20 questions customers most often ask a salon by DM. For each one, give the question, then a friendly reply under 50 words in a warm, chatty British tone. End with the booking link where it fits. At the end, list any question where you needed information I haven't given you."
+ },
+ {
+  "slug": "trades-voice-note-quote",
+  "title": "Turn a voice note into a quote before you've left the driveway",
+  "industry": "Trades & home services",
+  "job": "Sales",
+  "time_saved": "3–5 hrs a week",
+  "tools": "Your phone's voice notes, then ChatGPT or Claude",
+  "story": "Picture Dave, a plumber. Brilliant on the job, slow on paperwork, so his quotes go out days late and the work goes to whoever replied first. Now he records a 60-second voice note in the van, gets the transcript, and this prompt writes the quote.",
+  "prompt": "Here's a transcript of my notes from a site visit:\n[paste transcript]\n\nI'm a [trade] based in [area]. My day rate is £[rate] and I add [x]% on materials. Turn this into a professional quote for the customer with:\n1. A short, friendly intro\n2. An itemised list of the work and materials, each with a price\n3. A total, [including VAT at 20% / I'm not VAT registered]\n4. How long the job will take\n5. My terms: [deposit and payment terms]\n\nThen list anything I didn't mention that the customer will probably ask about."
+ },
+ {
+  "slug": "fitness-month-of-posts",
+  "title": "A month of social posts in one afternoon",
+  "industry": "Gyms & coaching",
+  "job": "Content",
+  "time_saved": "About 6 hrs a month",
+  "tools": "Claude or ChatGPT, then Canva",
+  "story": "Picture Sam, who runs a small PT studio. She knows she should post every day, but at 9pm the last thing she wants is to think of a caption. Once a month she sits down with a coffee and this prompt, and the whole calendar is done.",
+  "prompt": "I run [business name] for [ideal client, e.g. busy mums in their 40s] in [town].\nWhat makes us different: [2–3 points]\nThis month's offer: [offer]\n\nCreate a 4-week social media plan with 5 posts a week. For each post give the day, the format (Reel, carousel or photo), a scroll-stopping first line, a caption under 120 words in a [friendly / no-nonsense / motivating] voice, and one call to action.\n\nMix tips, client wins, behind-the-scenes and one offer post a week. Use 3 relevant hashtags at most."
+ },
+ {
+  "slug": "clinic-no-show-reminders",
+  "title": "Cut no-shows with reminders people actually reply to",
+  "industry": "Clinics & appointments",
+  "job": "Customer service",
+  "time_saved": "About 2 hrs a week, plus fewer empty slots",
+  "tools": "ChatGPT or Claude, then your booking system or Zapier",
+  "story": "An empty appointment slot is income gone for good. Most no-shows aren't rude; people just forget. A friendly reminder sequence fixes most of it, and you only write it once. Load it into your booking system, or connect it with Zapier.",
+  "prompt": "I run a [business type] called [name]. Appointments usually last [length] and cost £[price]. My cancellation policy is: [policy].\n\nWrite a reminder sequence:\n1. A booking confirmation email\n2. A reminder 48 hours before, with an easy way to rearrange\n3. A short text 2 hours before\n4. A kind follow-up if they miss it, offering a new slot\n\nKeep texts under 160 characters and emails under 100 words. Friendly, never formal, and never guilt-trip anyone."
+ },
+ {
+  "slug": "google-review-replies",
+  "title": "Reply to every Google review in your own voice",
+  "industry": "Any local business",
+  "job": "Marketing",
+  "time_saved": "1–2 hrs a week",
+  "tools": "Claude or ChatGPT",
+  "story": "Replying to reviews helps you show up in local search and tells the next customer you care. But writing 30 thoughtful replies takes an evening you don't have. This prompt drafts a reply to each review that sounds like you, not a robot.",
+  "prompt": "Here are my latest Google reviews, with star ratings:\n[paste reviews]\n\nMy business is [name], a [type of business] in [town]. Write a reply to each review, 2–3 sentences long, in a warm, genuine British voice.\n\nThank people by first name and mention something specific they said. For any review under 4 stars, apologise without making excuses and invite them to get in touch at [contact details]. Never start two replies the same way."
+ },
+ {
+  "slug": "ecommerce-product-descriptions",
+  "title": "Product pages that sell, written in minutes",
+  "industry": "E-commerce",
+  "job": "Marketing",
+  "time_saved": "3–4 hrs a week",
+  "tools": "ChatGPT or Claude, or Shopify Magic",
+  "story": "I've run an online clothing brand since 2017, so I know how much writing even a small shop needs. Shoppers can't touch or try on what's on a screen, so the words have to do the work. This prompt writes a product page from the few facts you already have.",
+  "prompt": "Write a product description for my online shop.\nProduct: [name]\nWhat it is and what it's made of: [details]\nSize, weight or variants: [details]\nWho buys it and why: [e.g. gifts for new homeowners]\nMy brand voice: [e.g. cosy, a bit cheeky]\n\nGive me:\n1. A product title under 70 characters that includes what people search for\n2. A 2-sentence opening that makes someone want it\n3. 4 short bullet points on features and benefits\n4. A short care or how-to-use note\n5. A meta description under 155 characters for Google\n\nUse British spelling. Don't invent claims I haven't given you."
+ },
+ {
+  "slug": "cafe-weekly-specials",
+  "title": "This week's specials, menu copy and post, done by Monday",
+  "industry": "Restaurants & cafés",
+  "job": "Marketing",
+  "time_saved": "About 2 hrs a week",
+  "tools": "ChatGPT or Claude, then Canva",
+  "story": "I ran two restaurants before any of this existed, so this one's close to my heart. The specials change every week, and so do the chalkboard, the Instagram post and the Google update. List the dishes and this prompt writes the lot, so you can get back to the kitchen.",
+  "prompt": "I run [café or restaurant name] in [area]. This week's specials are:\n[list each dish with main ingredients and price]\n\nWrite:\n1. A mouth-watering one-line menu description for each dish (under 15 words, no clichés like \"delicious\")\n2. Text for our chalkboard: short and punchy\n3. An Instagram caption announcing the specials, under 100 words, with one call to action to book or pop in\n4. A Google Business Profile update under 60 words\n\nFlag any dish where I should mention allergens."
+ },
+ {
+  "slug": "consultant-call-to-proposal",
+  "title": "From discovery call to proposal in 15 minutes",
+  "industry": "Consultants & agencies",
+  "job": "Sales",
+  "time_saved": "2–3 hrs per proposal",
+  "tools": "Otter.ai or your call recorder, then Claude",
+  "story": "Picture Aisha, a marketing consultant. She's great on calls, then spends half a day turning her notes into a proposal, and by then the client has cooled off. Now she records the call, pastes the transcript into this prompt, and sends the proposal the same afternoon.",
+  "prompt": "Here's the transcript of a discovery call with a potential client:\n[paste transcript]\n\nI'm a [what you do]. My packages and prices: [list them].\n\nWrite a proposal with:\n1. Their situation in their own words (2–3 sentences, so they feel heard)\n2. The 3 goals they care about most\n3. My recommended package and why it fits, with the price\n4. What happens in the first 30 days\n5. One clear next step to say yes\n\nKeep it under 600 words, confident and plain. Then list any objections they hinted at, and a one-line answer to each."
+ },
+ {
+  "slug": "hiring-job-ad-interview",
+  "title": "A job advert people actually finish reading, plus the interview questions",
+  "industry": "Any business",
+  "job": "Hiring & team",
+  "time_saved": "3–4 hrs per hire",
+  "tools": "Claude or ChatGPT",
+  "story": "Hiring your first or fifth person is nerve-racking, and most job adverts read like a list of demands. This prompt writes an advert that sells the job honestly, then gives you interview questions that show who can actually do it.",
+  "prompt": "I'm hiring a [job title] for [business name], a [type of business] in [town].\nHours and pay: [details]\nWhat they'll do day to day: [list]\nMust-haves: [list]\nNice-to-haves: [list]\nWhy people like working here: [honest reasons]\n\nWrite:\n1. A job advert under 350 words with a headline that would make the right person stop scrolling\n2. 3 screening questions for the application form\n3. 8 interview questions, including 3 practical \"what would you do if...\" scenarios for this role, each with what a good answer sounds like\n\nUse inclusive language and avoid anything that could put off good candidates."
+ },
+ {
+  "slug": "messy-notes-to-sop",
+  "title": "Turn “it's all in my head” into a staff training guide",
+  "industry": "Any business",
+  "job": "Admin",
+  "time_saved": "2–5 hrs a week once staff can self-serve",
+  "tools": "Your phone's voice notes, then Claude, then Notion",
+  "story": "If every question still comes to you, you don't have a business, you have a very busy job. Talk through how you do one task while you do it, record it, and this prompt turns the ramble into a step-by-step guide your team can follow without asking.",
+  "prompt": "Below is a rough transcript of me explaining how I do this task: [task name].\n[paste transcript or notes]\n\nTurn it into a standard operating procedure for a new member of staff:\n1. Purpose: one sentence on why this task matters\n2. What you need before you start\n3. Numbered steps, one action each, in plain English\n4. Common mistakes and how to avoid them\n5. How to know it's done right\n6. Who to ask if something goes wrong\n\nWhere my notes skip a step or are unclear, mark it with [CHECK] so I can fill it in."
+ },
+ {
+  "slug": "win-back-lapsed-customers",
+  "title": "Win back customers who've gone quiet",
+  "industry": "Any business",
+  "job": "Sales",
+  "time_saved": "About 2 hrs a month",
+  "tools": "ChatGPT or Claude, then Klaviyo or your email tool",
+  "story": "Your cheapest new sale is an old customer. Most have just drifted away, not left for good. This prompt writes a short, friendly 3-email sequence for anyone who hasn't bought or booked in a few months, so you can set it up once and let it run.",
+  "prompt": "My business is [name], selling [products or services] to [type of customer]. A typical customer comes back every [timeframe]. I can offer returning customers: [offer, e.g. 10% off, a free add-on].\n\nWrite a 3-email win-back sequence for customers who haven't bought in [x months]:\n1. A friendly \"we've missed you\" email with no hard sell\n2. A week later: what's new, plus the offer\n3. A week later: a last nudge with a clear deadline for the offer\n\nFor each email, give 2 subject line options, preview text, and a body under 120 words. Warm, personal, British spelling."
+ },
+ {
+  "slug": "repurpose-one-video",
+  "title": "One video, ten posts",
+  "industry": "Creators & coaches",
+  "job": "Content",
+  "time_saved": "4–6 hrs a week",
+  "tools": "Descript or YouTube's transcript, then Claude",
+  "story": "Picture Tom, a business coach who records one long video a week. It took him two hours and then sat on YouTube doing nothing else. Now he pastes the transcript into this prompt and gets a week of posts for every platform from that one recording.",
+  "prompt": "Here's the transcript of my latest video:\n[paste transcript]\n\nI help [audience] with [what you do]. My tone is [e.g. direct, warm, funny].\n\nTurn it into:\n1. 3 short-form video ideas: the exact moment to clip (quote the line it starts with) and a hook for the first 2 seconds\n2. 2 LinkedIn posts, each under 200 words, opening with a strong first line\n3. 1 carousel: a title slide and 6 slides of one idea each\n4. 3 tweets or Threads posts\n5. 1 newsletter intro under 120 words linking to the video\n\nUse my words and examples from the transcript; don't invent new stories."
+ },
+ {
+  "slug": "chase-late-invoices",
+  "title": "Chase late invoices without the awkwardness",
+  "industry": "Any business",
+  "job": "Finance",
+  "time_saved": "1–2 hrs a week",
+  "tools": "ChatGPT or Claude",
+  "story": "Chasing money you're owed feels awful, so it gets put off, and your cash flow pays the price. This prompt writes a polite, firm set of reminders that escalate step by step, so you never have to stare at a blank email again.",
+  "prompt": "I'm a [type of business] and I need to chase an unpaid invoice.\nClient: [name or company]\nInvoice number and amount: [details]\nDue date: [date]\nPayment terms and how to pay: [details]\nOur relationship: [e.g. good long-term client / one-off job]\n\nWrite 4 messages I can send in order:\n1. A friendly reminder on the due date\n2. A polite follow-up 7 days late\n3. A firmer email 14 days late, mentioning my terms\n4. A final notice 30 days late, explaining the next steps in a professional tone (if the client is a business, mention I can claim statutory interest under UK late payment law)\n\nKeep each under 120 words. Never rude, always clear about what I need and by when."
+ },
+ {
+  "slug": "property-listing-description",
+  "title": "Property listings that get the viewings booked",
+  "industry": "Property & lettings",
+  "job": "Marketing",
+  "time_saved": "2–3 hrs a week",
+  "tools": "ChatGPT or Claude",
+  "story": "Picture Nadia, a lettings agent with 12 new properties a month. Every listing needs a portal description, a social post and an email to her waiting list. This prompt turns her viewing notes into all three, written to attract the right tenants or buyers.",
+  "prompt": "Write marketing for this property.\nType, bedrooms, bathrooms: [details]\nLocation and what's nearby: [details]\nBest features: [list]\nPrice or rent: [£]\nIdeal buyer or tenant: [e.g. young professionals, families]\nAnything to be upfront about: [e.g. no parking]\n\nGive me:\n1. A portal headline under 80 characters\n2. A full description of 150–200 words that leads with lifestyle, then the facts\n3. A bullet list of key features\n4. An Instagram caption under 80 words\n5. A short email for my waiting list\n\nKeep it accurate: nothing I haven't told you, and no exaggeration."
+ },
+ {
+  "slug": "monday-ceo-hour",
+  "title": "The Monday CEO hour: sort your week in 10 minutes",
+  "industry": "Any business",
+  "job": "Admin",
+  "time_saved": "2–3 hrs a week of wasted effort",
+  "tools": "Claude or ChatGPT",
+  "story": "Since 2017 I have juggled a full-time business development job with running my own brand, so I know how easy it is to spend a whole week reacting. This is a Monday-morning habit: dump everything on your mind, and it hands back what actually matters, what to hand off or automate, and what you can drop without guilt.",
+  "prompt": "Act as my no-nonsense business coach. Here's everything on my mind this week, in no order:\n[brain-dump every task, worry and idea]\n\nMy main goal this quarter is: [goal]. I have about [x] hours this week for work on the business, not in it.\n\nSort it into:\n1. The 3 things that will move my goal forward most, with the first step for each\n2. Things to delegate, and to whom: [list your team or say \"just me\"]\n3. Things AI or automation could do for me, with the tool to use\n4. Things to drop or park, and why\n\nThen give me a simple day-by-day plan for the week. Be honest if I'm trying to do too much."
+ },
+ {
+  "slug": "calm-complaint-replies",
+  "title": "Turn an angry complaint into a loyal customer",
+  "industry": "Any business",
+  "job": "Customer service",
+  "time_saved": "1–2 hrs a week, and a lot of stress",
+  "tools": "Claude or ChatGPT",
+  "story": "Every owner knows the stomach-drop of a furious email at 10pm. Reply too fast and it gets worse; leave it and it festers. This prompt helps you answer calmly, own what went wrong, and fix it, so the customer leaves happier than before the problem happened.",
+  "prompt": "A customer has complained. Here's their message:\n[paste complaint]\n\nWhat actually happened, from our side: [the facts]\nWhat I can offer to put it right: [e.g. refund, redo, discount, nothing extra]\nMy business: [name and type]\n\nWrite a reply that:\n1. Thanks them for telling us and shows I've understood exactly what upset them\n2. Owns any mistake plainly, without grovelling or making excuses\n3. Explains what I'll do to fix it and by when\n4. Ends warmly, with my name and a direct way to reach me\n\nKeep it under 150 words. Calm, human, British. If they're partly in the wrong, stay kind and don't argue the point. Then give me a shorter version I could send as a text."
+ },
+ {
+  "slug": "website-faq-page",
+  "title": "An FAQ page that answers questions before they're asked",
+  "industry": "Any business",
+  "job": "Customer service",
+  "time_saved": "2–4 hrs a week of repeat questions",
+  "tools": "Claude or ChatGPT, then your website or a chat tool like Tidio",
+  "story": "If you answer the same ten questions every week, your customers are telling you what your website is missing. Write them down once, and this prompt turns them into a clear FAQ page you can also load into a website chat tool.",
+  "prompt": "I run [business name], a [type of business] in [area]. Here are the questions customers ask me most, roughly in my words:\n[list 10–20 questions, plus how you usually answer]\nKey facts: prices [ ], opening hours [ ], delivery or service area [ ], returns or cancellation policy [ ], how to book or buy [ ].\n\nWrite an FAQ page:\n1. Group the questions under 3–5 clear headings\n2. Answer each in under 60 words, friendly and plain\n3. Add 5 questions customers probably wonder about but don't ask\n4. Finish with a short line on how to get in touch for anything else\n\nOnly use facts I've given you. Mark anything you're unsure of with [CHECK]."
+ },
+ {
+  "slug": "new-customer-welcome",
+  "title": "Welcome new customers so they feel looked after from day one",
+  "industry": "Gyms & coaching",
+  "job": "Customer service",
+  "time_saved": "About 2 hrs a week",
+  "tools": "ChatGPT or Claude, then your email or booking system",
+  "story": "Picture Kev, who runs a boxing gym. New members sign up full of energy, then half of them drift away by week three because nobody checked in. A short welcome sequence does the checking in for him, so every new face feels noticed.",
+  "prompt": "I run [business name] for [type of customer]. When someone new signs up or buys, they get: [what happens next]. The things new customers usually worry about or get wrong: [list].\n\nWrite a welcome sequence:\n1. Day 0: a warm welcome with exactly what happens next\n2. Day 2: one simple tip to get the most out of us\n3. Day 7: a friendly check-in asking how it's going, with an easy way to reply\n4. Day 21: a short note celebrating their progress, plus one next step\n\nEach under 100 words, written like a person, not a company. Give 2 subject line options for each, and a text-message version of the day 7 check-in."
+ },
+ {
+  "slug": "quote-follow-up",
+  "title": "Follow up on a quote without feeling pushy",
+  "industry": "Trades & home services",
+  "job": "Sales",
+  "time_saved": "1–2 hrs a week, plus more jobs won",
+  "tools": "ChatGPT or Claude",
+  "story": "Most quotes aren't turned down; they're forgotten. The customer meant to reply, then life happened. A friendly nudge isn't pushy, it's helpful. This prompt writes follow-ups that feel like good service, not a sales chase.",
+  "prompt": "I sent a quote and haven't heard back.\nCustomer: [name]\nJob: [what it was for]\nQuote: £[amount], sent on [date]\nAnything they mentioned that mattered to them: [e.g. timing, budget, worried about mess]\n\nWrite 3 short follow-ups:\n1. After 3 days: a friendly check they received it, with an offer to answer questions\n2. After 7 days: something genuinely useful, like a tip or my next available dates\n3. After 14 days: a polite close-the-loop message that makes it easy to say \"not right now\"\n\nEach under 80 words, suitable for text or email. Warm, relaxed, zero pressure, no fake deadlines."
+ },
+ {
+  "slug": "human-cold-outreach",
+  "title": "Outreach messages that sound like a real person",
+  "industry": "Consultants & agencies",
+  "job": "Sales",
+  "time_saved": "2–3 hrs a week",
+  "tools": "Claude or ChatGPT, then LinkedIn or email",
+  "story": "I spent 14 years in business development, and the messages that got replies were short, specific and about the other person. This prompt helps you write that kind of message, the kind you'd be happy to receive yourself.",
+  "prompt": "I want to reach out to [type of person or business] about [what you offer].\nWho I am: [one line]\nWhy them specifically: [something real you noticed about them]\nA result I can honestly point to: [example, or \"none yet\"]\n\nWrite:\n1. A first message under 80 words that leads with them, not me, and ends with an easy, low-pressure question\n2. A follow-up for a week later that adds something useful rather than \"just bumping this\"\n3. 3 subject lines for email, and a 300-character version for a LinkedIn connection request\n\nNo flattery, no hype, no fake familiarity. If my reason for contacting them is weak, tell me."
+ },
+ {
+  "slug": "tasteful-promotion",
+  "title": "Plan a promotion that doesn't cheapen your brand",
+  "industry": "E-commerce",
+  "job": "Marketing",
+  "time_saved": "3–4 hrs per campaign",
+  "tools": "Claude or ChatGPT, then your email tool and Canva",
+  "story": "Picture Hannah, who sells jewellery online. Every time sales dip, she reaches for 20% off, and her customers have learned to wait for it. This prompt plans promotions that give people a reason to buy now without training them to expect a discount.",
+  "prompt": "I sell [products] to [customers]. My average order is about £[amount]. Reason for a promotion: [e.g. new collection, quiet month, clear old stock, anniversary].\nThings I'm happy to offer: [e.g. gift with purchase, bundle, free delivery, early access, small discount]\n\nGive me 3 promotion ideas that protect my brand. For each:\n1. The offer and why it suits my brand\n2. Who it's for (new customers, past customers, VIPs)\n3. A simple timeline: announce, remind, last chance\n4. An email subject line and a social caption\n5. What to measure to know if it worked\n\nAvoid fake scarcity or countdown tricks. Tell me which idea you'd pick and why."
+ },
+ {
+  "slug": "faq-to-blog-posts",
+  "title": "Turn customer questions into a month of blog posts",
+  "industry": "Any business",
+  "job": "Content",
+  "time_saved": "4–6 hrs a month",
+  "tools": "Claude or ChatGPT, then your website",
+  "story": "The questions your customers ask are exactly what other people are typing into Google. Answer them properly on your website and you'll be found by people who've never heard of you. This prompt turns your everyday questions into a month of useful posts.",
+  "prompt": "I run [business], a [type] in [area]. Here are questions customers often ask me:\n[list 8–12 questions]\n\n1. Pick the 4 most useful to answer as blog posts, and say why\n2. For each, give a clear title that matches how people search, and a 155-character meta description\n3. Write the first post in full: 600–800 words, plain English, with subheadings, one real example from my kind of business, and a gentle line at the end about how I can help\n4. Outline the other 3 with subheadings and key points\n\nUse British spelling. Don't invent facts, prices or statistics; mark gaps with [CHECK]."
+ },
+ {
+  "slug": "about-page-that-builds-trust",
+  "title": "An About page that makes people trust you",
+  "industry": "Any business",
+  "job": "Content",
+  "time_saved": "2–3 hrs",
+  "tools": "Claude or ChatGPT",
+  "story": "Your About page is usually the second page people visit. They're not checking your history; they're asking, \"Is this a real person I can trust?\" This prompt helps you tell your story honestly, so the right customers feel they already know you.",
+  "prompt": "Help me write the About page for [business name]. Here's my story, in no particular order:\n- How and why I started: [ ]\n- What I did before: [ ]\n- A moment that shaped how I work: [ ]\n- Who I help and what I help them with: [ ]\n- What I care about and won't compromise on: [ ]\n- Something human about me: [e.g. family, hobby, where I'm from]\n\nWrite a 300–400 word About page in the first person. Start with the customer's problem, not my CV. Show my story through one or two specific moments. Finish with a friendly, no-pressure invitation to get in touch.\n\nKeep my own phrases where they're good. Don't add achievements or details I haven't given you."
+ },
+ {
+  "slug": "phone-video-scripts",
+  "title": "Short video scripts you can film on your phone today",
+  "industry": "Any local business",
+  "job": "Content",
+  "time_saved": "3–4 hrs a week",
+  "tools": "ChatGPT or Claude, then CapCut",
+  "story": "Most owners know they should be on video, then freeze when the camera's on. A simple script with a strong first line changes that. This prompt gives you five short videos you can film on your phone in one go, no studio and no dancing.",
+  "prompt": "I run [business] for [ideal customer] in [area]. Things I know that customers find useful or surprising: [list 3–5]. A common mistake people make that I can help with: [ ].\n\nWrite 5 short video scripts, 30–45 seconds each. For each give:\n1. A hook for the first 2 seconds, said to camera\n2. The script, in short spoken sentences\n3. What to show on screen (simple, filmable on a phone)\n4. The caption and on-screen text\n5. One soft call to action\n\nMix: one tip, one myth-buster, one behind-the-scenes, one customer question, one \"day in the life\". Make it sound like me chatting, not an advert."
+ },
+ {
+  "slug": "inbox-zero-triage",
+  "title": "Clear your inbox in 20 minutes",
+  "industry": "Any business",
+  "job": "Admin",
+  "time_saved": "3–5 hrs a week",
+  "tools": "Claude or ChatGPT (or the AI built into Gmail or Outlook)",
+  "story": "An overflowing inbox isn't a time problem, it's a decisions problem: every email asks you to decide something. Paste in the backlog and this prompt sorts it, drafts the replies, and tells you which few actually need you.",
+  "prompt": "Here are the emails waiting in my inbox (sender, subject and the key text):\n[paste emails, removing anything sensitive]\n\nI run [business]. My priorities this week: [ ].\n\nSort them into:\n1. Needs me today: what decision each one needs, in one line\n2. Can be answered now: draft a short reply for each, in a friendly, direct voice\n3. Delegate: who it should go to [team members or \"just me\"] and a one-line handover note\n4. Archive or unsubscribe: list them\n\nKeep every draft reply under 80 words. Flag anything that looks like a scam or needs care."
+ },
+ {
+  "slug": "meeting-notes-to-actions",
+  "title": "Turn meeting notes into actions, owners and dates",
+  "industry": "Any business",
+  "job": "Admin",
+  "time_saved": "1–2 hrs a week",
+  "tools": "Otter.ai or your call recorder, then Claude",
+  "story": "Lots of meetings end with everyone nodding and nothing happening. The fix is boring but powerful: a clear list of who's doing what by when, sent the same day. This prompt turns a messy transcript into exactly that.",
+  "prompt": "Here are the notes or transcript from a meeting:\n[paste]\n\nPeople in the meeting: [names and roles]\n\nGive me:\n1. A 3-sentence summary of what was decided\n2. A table of actions: action, owner, deadline (suggest one if none was set, marked \"suggested\")\n3. Open questions nobody answered\n4. A short, friendly follow-up email to everyone with the summary and actions\n\nOnly include decisions and actions that were actually said. If an action has no clear owner, flag it rather than guessing."
+ },
+ {
+  "slug": "repeatable-checklist",
+  "title": "A checklist for anything you do more than once",
+  "industry": "Any business",
+  "job": "Admin",
+  "time_saved": "1–3 hrs a week of mistakes and re-dos",
+  "tools": "Claude or ChatGPT, then Notion",
+  "story": "Pilots use checklists not because they forget how to fly, but because busy people skip steps. Opening up, closing down, packing an order, launching a product: anything you repeat deserves a checklist so it's done right, even on a bad day.",
+  "prompt": "I want a checklist for this task: [task, e.g. closing the shop, sending out an order, onboarding a client].\nHow I do it now, roughly: [describe or paste notes]\nThings that have gone wrong before: [list]\n\nCreate:\n1. A checklist grouped into before, during and after, one action per line\n2. A note on the 3 steps that matter most and why\n3. A \"done right\" check at the end\n4. A one-page version short enough to print and stick on the wall\n\nKeep the wording simple enough for a new starter. Mark anything I need to confirm with [CHECK]."
+ },
+ {
+  "slug": "new-starter-first-week",
+  "title": "Help a new starter feel useful in their first week",
+  "industry": "Any business",
+  "job": "Hiring & team",
+  "time_saved": "4–6 hrs per new starter",
+  "tools": "Claude or ChatGPT, then Notion or a shared doc",
+  "story": "A new person's first week decides how they feel about you for months. Too often it's \"just shadow me\" and a pile of passwords. This prompt plans a calm, structured first week so they settle in quickly and you're not answering questions all day.",
+  "prompt": "I've hired a [job title] for [business name], starting on [date]. Their main responsibilities: [list]. Tools and systems they'll use: [list]. Who they'll work with: [names and roles].\n\nCreate a first-week plan:\n1. Before day one: what to prepare and a friendly welcome message to send them\n2. Day by day (Monday to Friday): what they'll learn, do and who they'll meet, with one small real task each day\n3. A list of questions they'll probably be too shy to ask, with answers I should give\n4. A 15-minute end-of-week chat: 5 questions to ask them\n\nKeep it realistic for a small business. Kind, clear, not corporate."
+ },
+ {
+  "slug": "helpful-one-to-ones",
+  "title": "One-to-ones that actually help your team",
+  "industry": "Any business",
+  "job": "Hiring & team",
+  "time_saved": "1 hr per meeting, plus fewer misunderstandings",
+  "tools": "Claude or ChatGPT",
+  "story": "Giving feedback is one of the hardest parts of running a team, especially when you're the friendly boss who works alongside everyone. This prompt helps you prepare a one-to-one that's honest, kind and specific, so it leads to change rather than awkwardness.",
+  "prompt": "I've got a one-to-one with [name], who works as [role]. They've been with us [how long].\nWhat's going well: [specific examples]\nWhat I'd like to change: [specific examples, and the impact]\nThings that might be going on for them: [e.g. new to the role, busy at home, unclear instructions]\n\nHelp me prepare:\n1. An opening that puts them at ease\n2. How to give the positive feedback specifically, not generically\n3. How to raise the issue clearly and kindly, with the exact words I could use\n4. 4 open questions to understand their side\n5. How to agree one or two next steps together\n\nKeep it a two-way conversation, not a telling-off."
+ },
+ {
+  "slug": "fair-cv-screening",
+  "title": "Shortlist applications fairly, in a fraction of the time",
+  "industry": "Any business",
+  "job": "Hiring & team",
+  "time_saved": "3–5 hrs per hire",
+  "tools": "Claude or ChatGPT",
+  "story": "When 60 applications land for one job, it's tempting to skim and go with your gut, and good people get missed. This prompt scores every application against what the job really needs, so your shortlist is quicker and fairer.",
+  "prompt": "I'm hiring a [job title]. The must-haves: [list]. The nice-to-haves: [list]. What great looks like in this role: [describe].\n\nHere are the applications (remove names, photos, ages and addresses first):\n[paste, numbered]\n\nFor each application:\n1. Score 1–5 against each must-have, with one line of evidence from what they wrote\n2. Note any nice-to-haves\n3. One question I should ask them at interview\n\nThen give me a ranked shortlist of the top 5 with a short reason for each. Judge only on skills and experience relevant to the job. Don't penalise career gaps or unusual routes into the role, and flag if my must-haves might be putting good candidates off."
+ },
+ {
+  "slug": "freelancer-brief",
+  "title": "A brief a freelancer can't misread",
+  "industry": "Any business",
+  "job": "Hiring & team",
+  "time_saved": "2–3 hrs per project, plus fewer re-dos",
+  "tools": "Claude or ChatGPT",
+  "story": "Most freelancer disasters start with a vague brief: \"make it look modern\". Then come the revisions, the extra invoices and the frustration on both sides. This prompt turns your rough idea into a clear brief so you get what you pictured the first time.",
+  "prompt": "I want to hire a freelancer for: [project, e.g. a logo, a website, product photos, bookkeeping].\nWhat I'm hoping to achieve: [ ]\nWho it's for: [my customers]\nExamples I like and why: [links or descriptions]\nBudget: £[ ] | Deadline: [ ]\n\nWrite:\n1. A clear brief: background, goal, what's included and what's not, deliverables, file formats, deadline, budget and how I'll give feedback\n2. A short job post for a freelance site\n3. 5 questions to ask before I hire someone\n4. A simple checklist for signing off the work\n\nPoint out anything vague in my request that could cause problems later."
+ },
+ {
+  "slug": "numbers-in-plain-english",
+  "title": "Understand your numbers in plain English",
+  "industry": "Any business",
+  "job": "Finance",
+  "time_saved": "1–2 hrs a month, and more confident decisions",
+  "tools": "Claude or ChatGPT",
+  "story": "Plenty of brilliant business owners feel a bit lost when the accountant sends over the figures, and that's nothing to be embarrassed about. This prompt explains what your numbers are telling you, in plain English, and what questions to ask next.",
+  "prompt": "Here are my business figures for [period] (remove account numbers and anything sensitive):\n[paste profit and loss, or monthly income and costs]\n\nMy business: [type], [number] staff. What I'm worried about or curious about: [ ].\n\nExplain, in plain English:\n1. How the business did overall, in 3 sentences\n2. The 3 numbers that matter most here and what they mean\n3. Anything that looks unusual, rising or worth a closer look\n4. 5 questions I should ask my accountant\n\nDon't give regulated financial or tax advice. Where something needs a professional, say so. Show any sums you do so I can check them."
+ },
+ {
+  "slug": "price-with-confidence",
+  "title": "Price your services with confidence",
+  "industry": "Any business",
+  "job": "Finance",
+  "time_saved": "2–3 hrs, and often more profit per job",
+  "tools": "Claude or ChatGPT",
+  "story": "Most small business owners undercharge, often because pricing feels personal. When you see your real costs laid out, the right price stops feeling like a guess. This prompt walks you through it step by step.",
+  "prompt": "Help me work out my pricing.\nWhat I sell: [service or product]\nTime it takes me per job: [hours]\nDirect costs per job: [materials, travel, fees]\nMonthly overheads: £[rent, software, insurance, etc.]\nHow many jobs I can realistically do a month: [ ]\nWhat I want to pay myself a year: £[ ]\nWhat competitors charge, roughly: [ ]\n\n1. Work out my true cost per job and show the sums\n2. Suggest a price range with a healthy margin\n3. Suggest a simple good, better, best set of packages\n4. Write a short, confident sentence for explaining a price rise to existing customers\n\nShow your working so I can check it. If my numbers don't add up to a sustainable business, tell me gently but clearly."
+ },
+ {
+  "slug": "find-money-leaks",
+  "title": "Find the money quietly leaking out of your business",
+  "industry": "Any business",
+  "job": "Finance",
+  "time_saved": "1–2 hrs, often saving £100s a year",
+  "tools": "Claude or ChatGPT",
+  "story": "Subscriptions you forgot about, a supplier who crept up their prices, software three people pay for separately. None of it is dramatic, but it adds up. Export a few months of spending and this prompt helps you spot what to cut or renegotiate.",
+  "prompt": "Here are my business outgoings for the last [3] months (description, amount, date; remove card and account numbers):\n[paste]\n\nMy business: [type], [number] staff.\n\n1. Group the spending into categories with monthly totals\n2. List every recurring subscription or payment, and flag any that look duplicated, unused or unusually expensive\n3. Spot any costs that have risen over the period\n4. Suggest the 5 changes that would save the most, with a rough saving for each\n5. Write a short, polite email I could send a supplier to ask for a better price\n\nShow the sums. Only flag what the data actually shows, and ask me about anything you can't tell."
+ },
+ {
+  "slug": "cost-a-menu-dish",
+  "title": "Cost a dish and price your menu properly",
+  "industry": "Restaurants & cafés",
+  "job": "Finance",
+  "time_saved": "2–3 hrs a menu, and better margins",
+  "tools": "Claude or ChatGPT",
+  "story": "I ran two restaurants, so I know how tight the margin on a plate can be, and how easily it slips when ingredient prices creep up. This prompt costs your dishes properly and suggests prices, so every plate earns its place on the menu.",
+  "prompt": "Help me cost my menu. For each dish, here are the ingredients, the amount used per portion, and what I pay for them:\n[Dish 1: ingredient, amount per portion, price I pay and pack size]\n[Dish 2: ...]\n\nThe food cost percentage I'm aiming for: [e.g. 28–32%]. Current menu prices, if any: [ ]. Including VAT? [yes/no]\n\n1. Work out the cost per portion for each dish, showing the sums\n2. Suggest a menu price for each to hit my target, before and after VAT\n3. Flag dishes that are underpriced or have the worst margins\n4. Suggest small tweaks (portion, garnish, a swap) that improve margin without hurting the dish\n\nShow your working clearly so I can check every number."
+ }
+]
