@@ -265,7 +265,7 @@ function vAccount(m){
   async function doSave(rebuild){st.textContent="Saving…";await safe(async()=>{const np=read();await A.saveProfile(np);if(rebuild)await A.replacePlan(buildPlan(np));});confirmRow.hidden=true;st.textContent=rebuild?"Saved, and your plan has been rebuilt.":"Saved.";renderNav();}
   form.addEventListener("submit",e=>{e.preventDefault();const np=read();const changed=np.goal!==p.goal||np.industry!==p.industry;if(changed&&S.steps.some(s=>s.done_at)){confirmRow.hidden=false;}else doSave(changed);});
   v.append(form);
-  v.append(el("div",{class:"card",style:"display:grid;gap:10px"},el("h3",{text:"Need a hand?"}),el("p",{class:"muted",text:"Reply to any email from me and it comes straight to my inbox. If you'd like your account and data removed, just ask and I'll do it."})));
+  v.append(el("div",{class:"card",style:"display:grid;gap:10px"},el("h3",{text:"Need a hand?"}),el("p",{class:"muted",text:"Email me at jay@jaysaiplaybook.blog, or reply to any email from me, and it comes straight to my inbox. If you'd like your account and data removed, just ask and I'll do it."})));
   v.append(el("button",{class:"btn",type:"button",style:"justify-self:start",text:"Sign out",onclick:()=>signOut()}));
   m.append(v);
 }
