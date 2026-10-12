@@ -491,8 +491,9 @@ $("onb-next").onclick=async()=>{if(onbI<ONB.length-1){onbI++;renderOnb();return;
 $("auth-form").addEventListener("submit",async e=>{e.preventDefault();const email=$("auth-email").value.trim(),st=$("auth-status");
   if(!/^\S+@\S+\.\S+$/.test(email)){st.textContent="Please check your email address and try again.";return;}
   $("auth-send").disabled=true;st.textContent="Sending…";
-  try{await A.sendLink(email);st.textContent="Done. Check your inbox for a link from Jay's AI Playbook. It works once and expires after an hour. Can't see it? Have a look in spam.";}
-  catch(err){st.textContent="That didn't go through: "+(err&&err.message||"please try again in a minute")+".";}
+  try{await A.sendLink(email);st.textContent="Done. Check your inbox for a link from Jay's AI Playbook. Tap the newest link. It works once and expires after an hour. Can't see it? Have a look in spam.";}
+  catch(err){const msg=String(err&&err.message||"");
+    st.textContent=/seconds|rate limit|too many/i.test(msg)?"I've just sent you a link, so please check your inbox (and spam) first. You can ask for a new one in about a minute.":"That didn't go through. Please check your connection and try again in a minute.";}
   finally{$("auth-send").disabled=false;}});
 async function signOut(){try{await A.signOut();}catch(e){}S.user=null;show("v-auth");}
 $("side-out").onclick=signOut;
@@ -533,7 +534,9 @@ async function start(){
   if(window.__jmDemo){startDemo();return;}
   const libOk=await loadLib();
   if(!libOk){startDemo();return;}
+  let linkErr="";try{const hp=new URLSearchParams((location.hash||"").replace(/^#/,""));if(hp.get("error")||hp.get("error_code")){linkErr=hp.get("error_code")||"error";history.replaceState(null,"",location.pathname+location.search);}}catch(e){}
   try{sb=window.supabase.createClient(SB_BASE,SB_PUB,{auth:{persistSession:true,detectSessionInUrl:true,flowType:"implicit"}});}catch(e){startDemo();return;}
+  if(linkErr){show("v-auth");$("auth-status").textContent=/expired|otp/i.test(linkErr)?"That sign-in link has expired or was already used. Each link works once, and only the newest one works. Pop your email in below and I'll send a fresh one.":"That sign-in link didn't work. Pop your email in below and I'll send a fresh one.";}
   loadPublic();
   const {data}=await sb.auth.getSession();
   if(data&&data.session){await loadPublic();await enter(data.session.user);}else{show("v-auth");try{if(new URLSearchParams(location.search).get("bought"))$("auth-paid").hidden=false;}catch(e){}}

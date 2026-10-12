@@ -15,7 +15,7 @@ async function verify(payload: string, header: string, secret: string): Promise<
 
 Deno.serve(async (req) => {
   if (req.method !== "POST") return new Response("POST only", { status: 405 });
-  const secret = Deno.env.get("STRIPE_WEBHOOK_SECRET");
+  const secret = (Deno.env.get("STRIPE_WEBHOOK_SECRET") || "").trim().replace(/^["']|["']$/g, "");
   if (!secret) return new Response("not configured", { status: 503 });
   const payload = await req.text();
   if (!(await verify(payload, req.headers.get("stripe-signature") || "", secret))) return new Response("bad signature", { status: 400 });

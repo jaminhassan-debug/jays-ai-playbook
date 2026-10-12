@@ -21,7 +21,7 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers });
   if (req.method !== "POST") return out({ error: "POST only" }, 405);
 
-  const key = Deno.env.get("STRIPE_SECRET_KEY");
+  const key = (Deno.env.get("STRIPE_SECRET_KEY") || "").trim().replace(/^["']|["']$/g, "");
   if (!key) return out({ error: "checkout-not-ready" }, 503);
 
   let body: { slug?: string };
