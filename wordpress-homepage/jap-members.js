@@ -247,7 +247,7 @@ function vTools(m){
   const want={leads:["Leads","Writing","Content"],admin:["Admin","Writing"],content:["Content","Writing"],service:["Service","Leads","Writing"],online:["Sales","Content","Writing"]}[(S.profile&&S.profile.goal)||"admin"];
   const rec=TOOLS.filter(t=>want.includes(t.job)).sort((a,b)=>b.roi-a.roi);
   const rest=TOOLS.filter(t=>!want.includes(t.job)).sort((a,b)=>b.roi-a.roi);
-  const sec=(title,list)=>{v.append(el("h2",{text:title}));const g=el("div",{class:"tools"});list.forEach(t=>{const card=el("div",{class:"tool"},el("div",{class:"tool-head"},el("h3",{text:t.name}),el("span",{class:"roi",text:t.roi.toFixed(1)+"/10"})),el("div",{class:"meter","aria-hidden":"true"},el("i",{style:"width:"+t.roi*10+"%"})),el("p",{text:t.best}),el("p",{style:"font-family:var(--mono);font-size:12px",text:t.job+" · about "+t.hrs+" hrs a week · setup "+t.setup+"/5"}));g.append(card);});v.append(g);};
+  const sec=(title,list)=>{v.append(el("h2",{text:title}));const g=el("div",{class:"tools"});list.forEach(t=>{const card=el("div",{class:"tool"},el("div",{class:"tool-head"},el("h3",{text:t.name}),el("span",{class:"roi",text:t.roi.toFixed(1)+"/10"})),el("div",{class:"meter","aria-hidden":"true"},el("i",{style:"width:"+t.roi*10+"%"})),el("p",{text:t.best}),el("p",{style:"font-family:var(--mono);font-size:12px",text:t.job+" · about "+t.hrs+" hrs a week · "+(t.setup<=1?"easy setup":t.setup<=2?"fairly easy setup":"some setup, worth getting help")}));g.append(card);});v.append(g);};
   sec("Best for your goal",rec);sec("Everything else",rest);
   m.append(v);
 }
