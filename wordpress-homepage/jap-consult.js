@@ -137,7 +137,7 @@ function renderDetails(){const d=S.details;
     return el("div",{class:"field"+(opts.full?" full":"")},el("label",{for:"d-"+id,text:label+(opts.req?"":" (optional)")}),i,opts.note?el("small",{text:opts.note}):null);};
   const grid=el("div",{class:"fields"},f("name","Your name","text",{req:true,ac:"name",max:"120"}),f("business","Business name","text",{ac:"organization"}),f("email","Email","email",{req:true,ac:"email",max:"254",full:true}),f("phone","Phone","tel",{ac:"tel",max:"40",note:"Only if you'd prefer a call"}),f("website","Website or Instagram","text",{max:"300",note:"Helps me look before we talk"}));
   const c=el("input",{type:"checkbox",id:"d-consent"});c.checked=!!d.consent;c.onchange=()=>{d.consent=c.checked;save();};
-  const consent=el("label",{class:"consent"},c,el("span",{id:"consent-text",text:"I'm happy for Jay to use my answers to prepare for our consultation and to email me about it. I can ask for my details to be deleted at any time."}));
+  const consent=el("label",{class:"consent"},c,el("span",{id:"consent-text"},"I'm happy for Jay to use my answers to prepare for our consultation and to email me about it. I can ask for my details to be deleted at any time. ",el("a",{href:"/privacy-policy/",target:"_blank",rel:"noopener",text:"Privacy policy"})));
   const err=el("p",{class:"err",role:"alert",hidden:true});
   form.append(grid,consent,err,el("div",{class:"actions"},el("button",{type:"button",class:"btn",onclick:()=>go(TOTAL-1)},"← Back"),el("button",{type:"submit",class:"btn btn-primary"},"Check my answers →")));
   form.onsubmit=e=>{e.preventDefault();const probs=[];
