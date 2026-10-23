@@ -39,21 +39,33 @@ Deno.serve(async (req) => {
     if (data?.user) { userId = data.user.id; email = data.user.email || ""; }
   }
 
-  const { data: pb } = await sb.from("playbooks").select("slug,title,tagline,price_pence,status,industry").eq("slug", slug).maybeSingle();
+  const { data: pb } = await sb.from("playbooks").select("slug,title,tagline,price_pence,status,industry,includes").eq("slug", slug).maybeSingle();
   if (!pb || pb.status !== "live") return out({ error: "not-on-sale" }, 404);
+  // Upgrade credit: anything in this product the member already bought comes off the price
+  let credit = 0;
   if (userId) {
-    const { data: own } = await sb.from("playbook_purchases").select("playbook_slug").eq("user_id", userId).eq("playbook_slug", slug).maybeSingle();
-    if (own) return out({ url: SITE + "/members/#playbooks", owned: true });
+    const { data: mine } = await sb.from("playbook_purchases").select("playbook_slug").eq("user_id", userId);
+    const owned = new Set((mine || []).map((r: { playbook_slug: string }) => r.playbook_slug));
+    if (owned.has(slug)) return out({ url: SITE + "/members/#playbooks", owned: true });
+    const inc: string[] = pb.includes || [];
+    if (inc.length && owned.size) {
+      const { data: parts } = await sb.from("playbooks").select("slug,price_pence,includes").in("slug", inc);
+      const ownedParts = (parts || []).filter((x: { slug: string }) => owned.has(x.slug));
+      const covered = new Set(ownedParts.flatMap((x: { includes: string[] | null }) => x.includes || []));
+      credit = ownedParts.filter((x: { slug: string }) => !covered.has(x.slug)).reduce((t: number, x: { price_pence: number }) => t + x.price_pence, 0);
+    }
   }
+  const amount = Math.max(pb.price_pence - credit, 100);
 
   const f = new URLSearchParams();
   f.set("mode", "payment");
   f.set("line_items[0][quantity]", "1");
   f.set("line_items[0][price_data][currency]", "gbp");
-  f.set("line_items[0][price_data][unit_amount]", String(pb.price_pence));
-  f.set("line_items[0][price_data][product_data][name]", pb.title);
-  if (pb.tagline) f.set("line_items[0][price_data][product_data][description]", pb.tagline.slice(0, 300));
+  f.set("line_items[0][price_data][unit_amount]", String(amount));
+  f.set("line_items[0][price_data][product_data][name]", credit ? pb.title + " (upgrade price)" : pb.title);
+  f.set("line_items[0][price_data][product_data][description]", (credit ? "£" + (credit / 100).toFixed(2).replace(/\.00$/, "") + " off for what you already own. " : "") + (pb.tagline || "").slice(0, 280));
   f.set("metadata[playbook_slug]", slug);
+  if (credit) f.set("metadata[upgrade_credit_pence]", String(credit));
   if (userId) f.set("metadata[user_id]", userId);
   f.set("payment_intent_data[metadata][playbook_slug]", slug);
   if (email) f.set("customer_email", email);
