@@ -1,0 +1,7 @@
+{"scenes": [
+ {"type": "title", "dur": 5, "eyebrow": "Module 3 · Advanced", "title": "Make it run itself", "lines": ["Connect the tools you already use, so the repeat jobs happen on their own."]},
+ {"type": "title", "dur": 6, "eyebrow": "The one rule", "title": "AI drafts. You approve.", "medium": true, "lines": ["Anything a customer sees waits for you. Allergens, health and refunds always stay with a person."]},
+ {"type": "list", "dur": 9.5, "eyebrow": "Seven automations, step by step", "title": "Built in Zapier or Make", "medium": true, "list": ["New review to a drafted reply", "Enquiries sorted and drafted", "Big bookings to the team sheet", "Thank-you and review request", "Approve posts, they publish", "Invoices to a price tracker", "Your numbers every Monday"]},
+ {"type": "list", "dur": 6.5, "eyebrow": "Plus", "title": "Keep it running", "medium": true, "list": ["The exact AI prompts to paste into each step", "A five-minute weekly check and a fix-it prompt", "Data protection basics and a 90-day plan"]},
+ {"type": "cta", "dur": 6, "title": "Try 3 lessons free", "medium": true, "url": "jaysaiplaybook.blog/playbooks", "small": "Part of the AI for Hospitality course."}
+]}
