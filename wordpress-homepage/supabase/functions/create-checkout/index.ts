@@ -40,7 +40,15 @@ Deno.serve(async (req) => {
   }
 
   const { data: pb } = await sb.from("playbooks").select("slug,title,tagline,price_pence,status,industry,includes").eq("slug", slug).maybeSingle();
-  if (!pb || pb.status !== "live") return out({ error: "not-on-sale" }, 404);
+  if (!pb) return out({ error: "not-on-sale" }, 404);
+  // Packs that aren't live yet can only be bought by an admin, to test the checkout end to end
+  let adminTest = false;
+  if (pb.status !== "live") {
+    if (!userId) return out({ error: "not-on-sale" }, 404);
+    const { data: isAdmin } = await sb.rpc("user_is_admin", { p_user: userId });
+    if (isAdmin !== true) return out({ error: "not-on-sale" }, 404);
+    adminTest = true;
+  }
   // Upgrade credit: anything in this product the member already bought comes off the price
   let credit = 0;
   if (userId) {
@@ -62,11 +70,12 @@ Deno.serve(async (req) => {
   f.set("line_items[0][quantity]", "1");
   f.set("line_items[0][price_data][currency]", "gbp");
   f.set("line_items[0][price_data][unit_amount]", String(amount));
-  f.set("line_items[0][price_data][product_data][name]", credit ? pb.title + " (upgrade price)" : pb.title);
+  f.set("line_items[0][price_data][product_data][name]", (credit ? pb.title + " (upgrade price)" : pb.title) + (adminTest ? " (admin test)" : ""));
   f.set("line_items[0][price_data][product_data][description]", (credit ? "£" + (credit / 100).toFixed(2).replace(/\.00$/, "") + " off for what you already own. " : "") + (pb.tagline || "").slice(0, 280));
   f.set("metadata[playbook_slug]", slug);
   if (credit) f.set("metadata[upgrade_credit_pence]", String(credit));
   if (userId) f.set("metadata[user_id]", userId);
+  if (adminTest) f.set("metadata[admin_test]", "true");
   f.set("payment_intent_data[metadata][playbook_slug]", slug);
   if (email) f.set("customer_email", email);
   f.set("allow_promotion_codes", "true");
