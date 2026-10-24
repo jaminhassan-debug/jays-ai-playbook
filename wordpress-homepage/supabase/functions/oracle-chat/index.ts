@@ -92,7 +92,7 @@ Deno.serve(async (req) => {
     });
   } catch (e) { console.error("fetch", String(e)); return out({ error: "busy" }, 503); }
   const j = await r.json().catch(() => ({}));
-  if (!r.ok) { console.error("anthropic", r.status, j?.error?.type, j?.error?.message); return out({ error: r.status === 429 ? "busy" : "ai" }, 502); }
+  if (!r.ok) { console.error("anthropic", r.status, j?.error?.type, j?.error?.message); return out({ error: r.status === 429 ? "busy" : (/credit balance/i.test(String(j?.error?.message || "")) ? "chat-not-ready" : "ai") }, 502); }
   let text = (j.content || []).filter((b: { type: string }) => b.type === "text").map((b: { text: string }) => b.text).join("").trim();
   const m = text.match(/\[\[next:(prompts|tools|playbooks|consult|none)\]\]\s*$/);
   const next = m ? m[1] : "none";
