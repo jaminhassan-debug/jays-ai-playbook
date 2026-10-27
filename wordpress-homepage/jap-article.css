@@ -15,14 +15,14 @@ body.admin-bar .jap-nav{top:32px}
 .logo-svg [fill="#000001"]{fill:var(--ink)}.logo-svg [fill="#000002"]{fill:var(--accent)}.logo-svg [stroke="#000003"]{stroke:var(--accent)}.logo-svg [fill="#000003"]{fill:var(--accent)}.logo-svg [fill="#000004"]{fill:var(--gold)}
 .jap-links{display:flex;gap:20px;font-weight:500;font-size:15px}
 .jap-links a{color:var(--muted);text-decoration:none;white-space:nowrap}.jap-links a:hover{color:var(--ink)}
-.jap-right{display:flex;align-items:center;gap:10px}
+.jap-right{display:flex;align-items:center;gap:10px;flex-shrink:0}.jap-right .jap-btn{white-space:nowrap}
 .jap-btn{font:600 15px/1 var(--body);border-radius:999px;padding:13px 20px;border:1.5px solid var(--ink);background:transparent;color:var(--ink)!important;text-decoration:none!important;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
 .jap-btn:hover{background:var(--surface)}
 .jap-btn-primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)!important}
 .jap-btn-primary:hover{background:var(--accent);filter:brightness(1.08)}
 .jap-btn:focus-visible,.jap-toggle:focus-visible,.jap-links a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .jap-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);padding:0;cursor:pointer}
-@media (max-width:1260px){.jap-toggle{display:inline-flex}.jap-links{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(14,20,51,.12);padding:8px 20px 16px!important;margin:0!important}
+@media (max-width:1200px){.jap-toggle{display:inline-flex}.jap-links{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(14,20,51,.12);padding:8px 20px 16px!important;margin:0!important}
  .jap-nav.open .jap-links{display:flex}.jap-links a{padding:14px 4px;border-bottom:1px solid var(--line);font-size:17px;color:var(--ink)}}
 @media (max-width:480px){.jap-right .jap-btn-primary{display:none}.jap-nav .logo-svg{height:26px}}
 /* the article */
@@ -82,6 +82,7 @@ body.admin-bar .jap-nav{top:32px}
 .jap-cta .jap-btn-primary{background:#F5C043;border-color:#F5C043;color:#1A1400!important}
 /* more articles */
 .jap-more{max-width:1120px;margin:56px auto 0!important;padding:40px 16px 0;border-top:1px solid var(--line)}
+.jap-all{margin:22px 0 0!important}
 .jap-more>h2{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.02em;margin:0 0 20px}
 .jap-more .wp-block-post-template{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;list-style:none;padding:0;margin:0}
 .jap-more .wp-block-post{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:0!important;display:flex;flex-direction:column}
