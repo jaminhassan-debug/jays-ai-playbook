@@ -9,7 +9,7 @@ body.single .wp-site-blocks>*{margin-block-start:0!important}
 .jap-nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 body.admin-bar .jap-nav{top:32px}
 @media (max-width:782px){body.admin-bar .jap-nav{top:46px}}
-.jap-nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;position:relative}
+.jap-nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
 .jap-logo{display:flex;align-items:center;text-decoration:none}
 .jap-nav .logo-svg{height:34px;width:auto;display:block}
 .logo-svg [fill="#000001"]{fill:var(--ink)}.logo-svg [fill="#000002"]{fill:var(--accent)}.logo-svg [stroke="#000003"]{stroke:var(--accent)}.logo-svg [fill="#000003"]{fill:var(--accent)}.logo-svg [fill="#000004"]{fill:var(--gold)}
@@ -22,7 +22,7 @@ body.admin-bar .jap-nav{top:32px}
 .jap-btn-primary:hover{background:var(--accent);filter:brightness(1.08)}
 .jap-btn:focus-visible,.jap-toggle:focus-visible,.jap-links a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .jap-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);padding:0;cursor:pointer}
-@media (max-width:1200px){.jap-toggle{display:inline-flex}.jap-links{display:none;position:absolute;left:-16px;right:-16px;top:100%;flex-direction:column;gap:0;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(14,20,51,.12);padding:8px 16px 16px}
+@media (max-width:1200px){.jap-toggle{display:inline-flex}.jap-links{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(14,20,51,.12);padding:8px 20px 16px!important;margin:0!important}
  .jap-nav.open .jap-links{display:flex}.jap-links a{padding:14px 4px;border-bottom:1px solid var(--line);font-size:17px;color:var(--ink)}}
 @media (max-width:480px){.jap-right .jap-btn-primary{display:none}.jap-nav .logo-svg{height:26px}}
 /* the article */
