@@ -1,12 +1,15 @@
 // The Oracle's live chat on jaysaiplaybook.blog. Short, useful first answers that point to the right next step.
-// Needs ANTHROPIC_API_KEY set as a Supabase secret. Daily limits keep costs predictable.
+// Answers come from Jay's written library first. Questions it can't match go to Claude if ANTHROPIC_API_KEY
+// works, otherwise they're passed to Jay to answer by email. Daily limits keep costs predictable.
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
 const SITE = "https://jaysaiplaybook.blog";
 const ALLOWED = [SITE, "https://www.jaysaiplaybook.blog"];
-const PER_VISITOR = 12;   // questions per visitor per day
-const PER_DAY = 400;      // questions across the whole site per day
+const PER_VISITOR = 30;   // questions per visitor per day
+const PER_DAY = 1000;     // questions across the whole site per day
 const MAX_TURNS = 8;      // earlier messages kept for context
+const MATCH_MIN = 3;      // how close a library answer must be to use it instead of AI
+const IND_CODE: Record<string, string> = { "Restaurant, café or hospitality": "hospitality", "E-commerce shop": "ecommerce", "Salon, beauty or barber": "salon", "Trades and home services": "trades", "Gym, fitness or coaching": "fitness", "Clinic or healthcare practice": "clinic", "Agency or consultancy": "consultant", "Content creator": "creator", "Property or lettings": "property" };
 
 function cors(origin: string | null) {
   const ok = origin && (ALLOWED.includes(origin) || origin.endsWith(".claudeusercontent.com"));
@@ -60,7 +63,6 @@ Deno.serve(async (req) => {
   if (req.method !== "POST") return out({ error: "POST only" }, 405);
 
   const key = (Deno.env.get("ANTHROPIC_API_KEY") || "").trim().replace(/^["']|["']$/g, "");
-  if (!key) return out({ error: "chat-not-ready" }, 503);
 
   let body: { q?: string; token?: string; history?: { role: string; content: string }[]; ctx?: Record<string, string> };
   try { body = await req.json(); } catch { return out({ error: "bad json" }, 400); }
@@ -88,6 +90,25 @@ Deno.serve(async (req) => {
   if (gerr) { console.error("gate", gerr.message); return out({ error: "busy" }, 503); }
   if (gate !== "ok") return out({ error: gate }, 429);
 
+  // 1. Answer from Jay's library of 300 written answers when one fits (free, instant, no AI needed)
+  const code = IND_CODE[String((lead as Record<string, string>).industry || "")] || null;
+  const { data: hits } = await sb.rpc("oracle_match", { p_q: q, p_industry: code });
+  const best = Array.isArray(hits) && hits[0];
+  if (best && best.score >= MATCH_MIN) {
+    const links = (best.next || []).filter((n: { t: string }) => n.t !== "q").slice(0, 2).map((n: { label: string; href: string }) => ({ label: n.label, href: n.href }));
+    const also = hits.slice(1).filter((h: { score: number }) => h.score >= MATCH_MIN).slice(0, 2).map((h: { slug: string; question: string }) => ({ slug: h.slug, question: h.question }));
+    return out({ answer: best.answer, next: "none", links, also, source: "library", slug: best.slug });
+  }
+  // Greetings and very short messages get a friendly nudge rather than going to Jay
+  if (q.split(/\s+/).filter((w) => w.length > 2).length < 3) {
+    return out({ answer: "Hi! Ask me anything about using AI in your business, in your own words. For example: \"How can AI help me reply to reviews?\" or \"What should I automate first?\"", next: "none", links: [], source: "hint" });
+  }
+  // 2. Otherwise, a short AI answer if the Anthropic account is set up
+  const fallback = async () => {
+    await sb.rpc("oracle_question_for_jay", { p_token: token, p_q: q }).then(() => {}, () => {});
+    return out({ answer: "Good question. I don't have a ready answer for that one yet, so I've passed it to Jay, who'll reply to you personally by email.\n\nIn the meantime, have a look through the 300 answers above, or book a free 20-minute chat if you'd like to talk it through.", next: "consult", links: [], source: "jay" });
+  };
+  if (!key) return await fallback();
   const model = (Deno.env.get("ORACLE_MODEL") || "claude-haiku-5-5").trim();
   const messages = [...history, { role: "user", content: (ctxLine ? `[About my business: ${ctxLine}]\n` : "") + q }];
   let r: Response;
@@ -97,9 +118,9 @@ Deno.serve(async (req) => {
       headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
       body: JSON.stringify({ model, max_tokens: 400, system: SYSTEM, messages }),
     });
-  } catch (e) { console.error("fetch", String(e)); return out({ error: "busy" }, 503); }
+  } catch (e) { console.error("fetch", String(e)); return await fallback(); }
   const j = await r.json().catch(() => ({}));
-  if (!r.ok) { console.error("anthropic", r.status, j?.error?.type, j?.error?.message); return out({ error: r.status === 429 ? "busy" : (/credit balance/i.test(String(j?.error?.message || "")) ? "chat-not-ready" : "ai") }, 502); }
+  if (!r.ok) { console.error("anthropic", r.status, j?.error?.type, j?.error?.message); return await fallback(); }
   let text = (j.content || []).filter((b: { type: string }) => b.type === "text").map((b: { text: string }) => b.text).join("").trim();
   const m = text.match(/\[\[next:(prompts|tools|playbooks|consult|none)\]\]\s*$/);
   const next = m ? m[1] : "none";
