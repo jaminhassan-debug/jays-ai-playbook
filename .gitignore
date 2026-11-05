@@ -7,4 +7,6 @@ build/
 *.log
 .DS_Store
 .vscode/
-.idea/
+.idea/wordpress-homepage/tools/cover/gf/
+wordpress-homepage/tools/cover/stills/
+wordpress-homepage/tools/cover/out/
