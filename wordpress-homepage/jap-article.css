@@ -124,3 +124,27 @@ body.admin-bar .jap-nav{top:32px}
 /* footer, same as the main site */
 .jap-foot{max-width:1120px;margin:56px auto 0;padding:32px 16px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 .jap-foot a{color:var(--muted)}.jap-foot a:hover{color:var(--ink)}
+/* free prompt library sign-up */
+.jap-sub{background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:30px;margin:34px 0 0!important;display:grid;gap:22px}
+@media (min-width:760px){.jap-sub{grid-template-columns:1fr 1fr;align-items:start}}
+.jap-sub .jap-eyebrow{color:var(--accent)!important}
+.jap-sub h2{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.2vw,30px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 10px}
+.jap-sub p{margin:0 0 10px;color:var(--muted);font-size:16px}
+.jap-sub ul{margin:6px 0 0;padding-left:20px;color:var(--muted);font-size:15px}
+.jap-sub-form{display:grid;gap:12px}
+.jap-sub-form label{display:grid;gap:6px;font-weight:600;font-size:15px}
+.jap-sub-form input[type=text],.jap-sub-form input[type=email]{font:16px/1.3 var(--body);padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);width:100%;box-sizing:border-box}
+.jap-sub-form input:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
+.jap-sub-form .jap-consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--muted)}
+.jap-sub-form .jap-consent input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--accent)}
+.jap-sub-form .jap-consent a{color:var(--accent)}
+.jap-sub-form .jap-btn{justify-content:center}
+.jap-sub-form .jap-btn[disabled]{opacity:.6;cursor:wait}
+.jap-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.jap-sub-msg{margin:0!important;font-size:15px;min-height:1em}
+.jap-sub-msg.err{color:#C62828}
+@media (prefers-color-scheme:dark){.jap-sub-msg.err{color:#FF8A80}}
+.jap-sub-done{background:var(--accent-soft);border-radius:14px;padding:18px}
+.jap-sub-done p{color:var(--ink);margin:0 0 12px}
+.jap-sub-done p:last-child{margin:0}
+.jap-sub-wide{max-width:760px;margin:0 auto!important}
